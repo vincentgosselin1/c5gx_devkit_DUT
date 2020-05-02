@@ -1,5 +1,5 @@
 Analysis & Synthesis report for c5gx_devkit_DUT
-Fri May 01 23:08:46 2020
+Fri May 01 23:18:25 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 01 23:08:46 2020       ;
+; Analysis & Synthesis Status     ; Successful - Fri May 01 23:18:25 2020       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; c5gx_devkit_DUT                             ;
 ; Top-level Entity Name           ; c5gx_devkit_DUT                             ;
@@ -563,7 +563,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri May 01 23:08:10 2020
+    Info: Processing started: Fri May 01 23:17:49 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off c5gx_devkit_DUT -c c5gx_devkit_DUT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -601,7 +601,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_99c File: C:/intelFPGA_lite/17.1/quartus/MyDev/c5gx_devkit_DUT/db/cmpr_99c.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2020.05.01.23:08:31 Progress: Loading sld5e2d7827/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.05.01.23:18:08 Progress: Loading sld5e2d7827/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -684,8 +684,8 @@ Info (21057): Implemented 669 device resources after synthesis - the final resou
     Info (21061): Implemented 607 logic cells
     Info (21064): Implemented 4 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 58 warnings
-    Info: Peak virtual memory: 4918 megabytes
-    Info: Processing ended: Fri May 01 23:08:46 2020
+    Info: Peak virtual memory: 4912 megabytes
+    Info: Processing ended: Fri May 01 23:18:25 2020
     Info: Elapsed time: 00:00:36
     Info: Total CPU time (on all processors): 00:01:02
 
