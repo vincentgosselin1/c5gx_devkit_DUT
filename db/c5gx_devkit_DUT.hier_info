@@ -130,38 +130,18 @@ clock_out <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |c5gx_devkit_DUT|myGalvo_v2:inst1
-clk => dff2_sync:inst0a.clk
-clk => galvo_busy.CLK
-clk => reset.CLK
-clk => dff2_sync:inst0b.clk
 clk => clock_divider_v1:inst1.clock_in
+clk => galvo_busy.CLK
+clk => resetn.CLK
 clk => galvo_memory:inst4.clk
 clk => frame_generator_xy2:inst5.clk
-galvo_busy_in => dff2_sync:inst0a.d_in
-resetn_in => dff2_sync:inst0b.d_in
+galvo_busy_in => galvo_busy.DATAIN
+resetn_in => resetn.DATAIN
 galvo_ydata_xy2 <= frame_generator_xy2:inst5.galvo_ydata_xy2
 galvo_xdata_xy2 <= frame_generator_xy2:inst5.galvo_xdata_xy2
 galvo_sync_xy2 <= frame_generator_xy2:inst5.galvo_sync_xy2
 galvo_clock_xy2 <= frame_generator_xy2:inst5.galvo_clock_xy2
 galvo_line_sync <= frame_generator_xy2:inst5.galvo_line_sync
-
-
-|c5gx_devkit_DUT|myGalvo_v2:inst1|dff2_sync:inst0a
-clk => dff2.CLK
-clk => dff1.CLK
-resetn => dff2.ACLR
-resetn => dff1.ACLR
-d_in => dff1.DATAIN
-q_out <= dff2.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|c5gx_devkit_DUT|myGalvo_v2:inst1|dff2_sync:inst0b
-clk => dff2.CLK
-clk => dff1.CLK
-resetn => dff2.ACLR
-resetn => dff1.ACLR
-d_in => dff1.DATAIN
-q_out <= dff2.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |c5gx_devkit_DUT|myGalvo_v2:inst1|dff2_sync:inst0c
