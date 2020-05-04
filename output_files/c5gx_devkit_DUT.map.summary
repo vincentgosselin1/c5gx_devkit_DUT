@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri May 01 23:18:25 2020
+Analysis & Synthesis Status : Successful - Mon May 04 12:18:25 2020
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : c5gx_devkit_DUT
 Top-level Entity Name : c5gx_devkit_DUT
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 456
+Total registers : 1062
 Total pins : 53
 Total virtual pins : 0
-Total block memory bits : 1,024
+Total block memory bits : 528,884
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
