@@ -4,10 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "ledg0",
-					"strict" : false
-				},
-				{
 					"name" : "ledr0",
 					"strict" : false
 				},
@@ -28,11 +24,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "key0",
+					"name" : "gpio_d[8]",
 					"strict" : false
 				},
 				{
-					"name" : "clk_50",
+					"name" : "key0",
 					"strict" : false
 				},
 				{

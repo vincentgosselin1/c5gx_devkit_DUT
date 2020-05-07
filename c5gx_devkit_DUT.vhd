@@ -59,12 +59,21 @@ architecture rtl of c5gx_devkit_DUT is
 	);
 	END COMPONENT;
 	
+	component PLL_devkit is
+		port (
+			refclk   : in  std_logic := 'X'; -- clk
+			rst      : in  std_logic := 'X'; -- reset
+			outclk_0 : out std_logic         -- clk
+		);
+	end component PLL_devkit;
+	
 	
 	
 	--signals
-	signal resetn : std_logic;
+	signal resetn, reset : std_logic;
 	signal heartbeat : std_logic;
 	signal sw0_d : std_logic;
+	signal clk : std_logic;
 	
 begin
 	
@@ -73,20 +82,21 @@ begin
 	resetn <= key0;
 	ledg0 <= resetn;
 	ledr0 <= heartbeat;
+	reset <= not(resetn);
 	
 	
 	--instantiations
 	inst0 : clock_divider_v1
 	generic map (DIVISOR => 50000000)
 	port map(
-		clock_in => clk_50,
+		clock_in => clk,
 		clock_out => heartbeat
 	);
 	
 	inst0a : sw_debouncer
 	PORT map
 	(
-		clk		=> clk_50,
+		clk		=> clk,
 		resetn	=> resetn,
 		sw_in		=> sw0,
 		sw_out	=> sw0_d
@@ -97,7 +107,7 @@ begin
 	inst1 :  myGalvo_v2
 	PORT map
 	(
-		clk => clk_50,
+		clk => clk,
 		galvo_busy_in	=> sw0_d,
 		resetn_in	=> resetn,
 		galvo_ydata_xy2	=> gpio_d(0),
@@ -106,6 +116,13 @@ begin
 		galvo_clock_xy2	=> gpio_d(6),
 		galvo_line_sync	=> gpio_d(8)
 	);
+	
+	inst2 : PLL_devkit
+		port map(
+			refclk  => clk_50,
+			rst      => reset,
+			outclk_0 => clk
+		);
 		
 	
 	
